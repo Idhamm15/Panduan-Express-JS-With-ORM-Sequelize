@@ -23,13 +23,13 @@
 
       $ sudo npm install -g nodemon
 
-   (Opsional biasanya ada yang sudah terinstall otomatis bebarengan dengan penginstalan node js).
+   - (Opsional biasanya ada yang sudah terinstall otomatis bebarengan dengan penginstalan node js).
 
 - Buat file .sequelizerc dengan menggunakan perintah ini :
 
       $ touch .sequelizerc
 
-dan isi code nya dengan menggunakan code di bawah :
+- Dan isi code nya dengan menggunakan code di bawah :
 
       const path = require('path');
       module.exports = {
@@ -80,16 +80,16 @@ dan isi code nya dengan menggunakan code di bawah :
 
       $ npx sequelize db:create
 
-bisa di cek respon dari terminalnya dan bisa juga cek di localhost/phpmyadmin apakah sudah terbuat databasenya secara otomatis.
+- Bisa di cek respon dari terminalnya dan bisa juga cek di localhost/phpmyadmin apakah sudah  terbuat databasenya secara otomatis.
 
 - Buat model databasenya terlebih dahulu seperti contoh ini :
 
       $ npx sequelize model:create --name menu --attributes nama:string,harga:integer,deskripsi:string,kategori:string
 
-Keterangan :
+    - Keterangan :
 
-menu = nama tabelnya
-nama, harga deskripsi dan kategori = kolom /attributenya.
+    - menu = nama tabelnya
+    - nama, harga deskripsi dan kategori = kolom /attributenya.
 
 - cek pada model dan database/migration
 
@@ -130,7 +130,7 @@ nama, harga deskripsi dan kategori = kolom /attributenya.
 
       module.exports = menuRoutes;
 
-disini yang kita pakai hanya getall nya terlebih dahulu.
+- disini yang kita pakai hanya getAll nya terlebih dahulu.
 
 - Kemudian buat file baru di folder routes lagi bernama index.js, yang berisi code di bawah ini :
 
