@@ -5,6 +5,7 @@
 - Relasi
 - JWT Web Token
 
+
 ## Cara penggunaan :
 
 - Buka terminal, ketik npm init -y, untuk menginisialisasi npm pada project kita.
@@ -177,7 +178,7 @@
           //   ...body,
           //   image: req.image.url,
           // };
-          menu.create(req)
+          menu.create(body)
             .then((data) => {
               res.send({
                 msg: "succes get all data ",
