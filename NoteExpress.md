@@ -271,6 +271,7 @@
 - Kemudian, buka Thunder clietnya, Ubah methodenya menjadi DELETE dan ubah urlnya menjadi localhost:5000/menu/hapusData/1
 
   Keterangan :
+  
       - localhost = Server lokal
       - 5000 = port yang berjalan
       - hapusData = mengikuti yang ada di menu routes (di menu routes bebas penamaan pathnya)
