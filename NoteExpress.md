@@ -23,6 +23,7 @@ Atau bisa juga menggunakan perintah :
 - Install Nodemon di project dengan perintah ini:
 
    $ sudo npm install -g nodemon
+   
    (Opsional biasanya ada yang sudah terinstall otomatis bebarengan dengan penginstalan node js).
 
 - Buat file .sequelizerc dengan menggunakan perintah ini :
