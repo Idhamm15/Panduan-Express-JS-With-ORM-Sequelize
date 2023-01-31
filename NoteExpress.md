@@ -88,8 +88,8 @@
 
     - Keterangan :
 
-    - menu = nama tabelnya
-    - nama, harga deskripsi dan kategori = kolom /attributenya.
+      - menu = nama tabelnya
+      - nama, harga deskripsi dan kategori = kolom /attributenya.
 
 - cek pada model dan database/migration
 
@@ -198,11 +198,11 @@
 
   Keterangan :
 
-  - localhost = server localhost
-  - 5000 = port server node js yang sedang kita jalankan
-  - menu = nama model tabelnya, waktu kita jalankan :
-    $ npx sequelize model:create --name menu --attributes nama:string,harga:integer,deskripsi:string,kategori:string
-  - tambahData = mengikuti path yang ada di file menuRoutes.js
+    - localhost = server localhost
+    - 5000 = port server node js yang sedang kita jalankan
+    - menu = nama model tabelnya, waktu kita jalankan :
+      $ npx sequelize model:create --name menu --attributes nama:string,harga:integer,deskripsi:string,kategori:string
+    - tambahData = mengikuti path yang ada di file menuRoutes.js
 
 - masukan datanya, bisa klik menu body => form-encode => kemudian isikan datanya sesuai kolomnya, contoh :
 
