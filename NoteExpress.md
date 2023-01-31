@@ -173,8 +173,7 @@
       },
       postData: (req, res) => {
       let { body } = req;
-
-          // const newData = {
+      // const newData = {
           //   ...body,
           //   image: req.image.url,
           // };
@@ -193,7 +192,6 @@
                 err,
               });
             });
-
       }
       };
 
