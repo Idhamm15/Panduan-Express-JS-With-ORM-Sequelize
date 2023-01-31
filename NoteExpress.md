@@ -59,13 +59,14 @@
       console.log("server run in port " + port)
       });
 
-      - Kemudian masuk package.json, pada baris di bawah ini :
+- Kemudian masuk package.json, pada baris di bawah ini :
 
       "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
       },
 
-      Tambahkan codenya menjadi seperti ini :
+- Tambahkan codenya menjadi seperti ini :
+
       "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "start" :"nodemon index.js",
