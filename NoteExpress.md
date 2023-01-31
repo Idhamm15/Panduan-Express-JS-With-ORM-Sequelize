@@ -12,20 +12,25 @@ fungsi dari sequelize-cli di sini adalah     untuk mempermudah membuat perintah 
 sequelize/.
 
 Jika Error bisa menggunakan perintah ini :
+
       $ npm i --save express mysql2
       $ npm i sequalize-cli --save
 
 Atau bisa juga menggunakan perintah :
+
       $ npm i express mysql2 sequelize sequelize-cli
 
 - Install Nodemon di project dengan perintah ini:
+
    $ sudo npm install -g nodemon
    (Opsional biasanya ada yang sudah terinstall otomatis bebarengan dengan penginstalan node js).
 
 - Buat file .sequelizerc dengan menggunakan perintah ini :
+
    $ touch .sequelizerc
 
 dan isi code nya dengan menggunakan code di bawah :
+
       const path = require('path');
       module.exports = {
       'config': path.resolve('src/config', 'config.js'),
@@ -66,19 +71,22 @@ dan isi code nya dengan menggunakan code di bawah :
 
 - Buat folder src kemudian ketik di terminal seperti di bawah ini :
 
-$ cd src
-$ npx sequelize init
+      $ cd src
+      $ npx sequelize init
 
 - Buat folder bernama Controllers dan Routes (penamaan folder bebas)
 
 - Jalankan perintah di terminalnya dengan perintah berikut untuk membuat databasenya :
 
-$ npx sequelize db:create
+      $ npx sequelize db:create
+
 bisa di cek respon dari terminalnya dan bisa juga cek di localhost/phpmyadmin apakah sudah terbuat databasenya secara otomatis.
 
 - Buat model databasenya terlebih dahulu seperti contoh ini :
 
-$ npx sequelize model:create --name menu --attributes nama:string,harga:integer,deskripsi:string,kategori:string
+      $ npx sequelize model:create --name menu --attributes nama:string,harga:integer,deskripsi:string,kategori:string
+      
+Keterangan :
 
 menu = nama tabelnya
 nama, harga deskripsi dan kategori = kolom /attributenya.
