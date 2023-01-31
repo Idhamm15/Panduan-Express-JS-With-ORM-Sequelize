@@ -229,4 +229,51 @@
       console.log("server run in port " + port);
       });
 
-- Kemudian coba cek datanya dengan mengganti methodenya menjadi GET dan ganti urlnya menjadi localhost:5000/menu.
+- Kemudian coba cek datanya menggunakan Thunder Client dengan mengganti methodenya menjadi GET dan ganti urlnya menjadi localhost:5000/menu.
+
+- Selanjutnya, tambahkan methode hapus data dengan cara tambahkan code pada file menuController.js yang ada di folder controller (./src/controller/menuController.js) dengan code seperti di ini :
+
+      // Methode untuk hapus data
+      delete: (req, res) => {
+      const { id } = req.params;
+      menu.destroy({
+            where: { id },
+            })
+            .then((data) => {
+            res.send({
+            msg: "succes delet ",
+            status: 200,
+            data,
+            });
+            })
+            .catch((err) => {
+            res.send({
+            msg: "eror delete ",
+            status: 500,
+            err,
+            });
+            });
+      },
+
+- tambahkan code ke file menuRoutes.js yang ada di Routes (./src/Routes/menuRoutes.js) dengan code seperti ini :
+
+      // file menuRoutes.js (./src/Routes/menuRoutes.js)
+      const menuRoutes = require("express").Router();
+      const menuControllers = require("../controllers/menuController");
+
+      menuRoutes.get("/", menuControllers.getAll);
+      menuRoutes.post("/tambahData", menuControllers.postData);
+      // menuRoutes.put("/", menuControllers.editData);
+      menuRoutes.delete("/hapusData/:id", menuControllers.delete);
+
+      module.exports = menuRoutes;
+
+- Kemudian, buka Thunder clietnya, Ubah methodenya menjadi DELETE dan ubah urlnya menjadi localhost:5000/menu/hapusData/1
+
+      - Keterangan :
+            - localhost = Server lokal
+            - 5000 = port yang berjalan
+            - hapusData = mengikuti yang ada di menu routes (di menu routes bebas penamaan pathnya)
+            - 1 = Id yang akan dihapus
+
+            
