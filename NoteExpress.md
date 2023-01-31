@@ -6,8 +6,10 @@
 
 - buka terminal, ketik npm init -y, untuk menginisialisasi npm pada project kita.
 
-- npm i express mysql2 sequelize sequelize-cli –-save, fungsi dari sequelize-cli di sini adalah untuk mempermudah membuat perintah di
-  sequelize/.
+$ npm i express mysql2 sequelize sequelize-cli –-save
+
+fungsi dari sequelize-cli di sini adalah     untuk mempermudah membuat perintah di
+sequelize/.
 
 Jika Error bisa menggunakan perintah ini :
 $ npm i --save express mysql2
