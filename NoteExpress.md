@@ -1,6 +1,9 @@
 # MEMBUAT BACKEND RESTFUL API DENGAN MENGGUNAKAN EXPRESS JS WITH ORM SEQUELIZE
 
 ## Component
+    - CRUD
+    - Relasi
+    - JWT Web Token
 
 ## Cara penggunaan :
 
