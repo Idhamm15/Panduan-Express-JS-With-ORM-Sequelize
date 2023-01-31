@@ -8,15 +8,14 @@
 
       $ npm i express mysql2 sequelize sequelize-cli –-save
 
-fungsi dari sequelize-cli di sini adalah untuk mempermudah membuat perintah di
-sequelize
+- fungsi dari sequelize-cli di sini adalah untuk mempermudah membuat perintah di sequelize
 
-Jika Error bisa menggunakan perintah ini :
+- Jika Error bisa menggunakan perintah ini :
 
         $ npm i --save express mysql2
         $ npm i sequalize-cli --save
 
-Atau bisa juga menggunakan perintah :
+- Atau bisa juga menggunakan perintah :
 
         $ npm i express mysql2 sequelize sequelize-cli
 
