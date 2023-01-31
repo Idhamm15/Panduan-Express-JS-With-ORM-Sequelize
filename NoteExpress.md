@@ -85,8 +85,9 @@ nama, harga deskripsi dan kategori = kolom /attributenya.
 
 - lalu jalankan npx sequelize db:migrate cek pada database maka akan ada tabel baru
 
-- Buat file menuController.js (penamaan bebas), kemudian tambahkan code get all seperti ini :
+- Buat file menuController.js (penamaan bebas), pada folder controller kemudian tambahkan code get all seperti ini :
 
+// File /controller/menuController.js
 const { menu } = require("../models");
 module.exports = {
 getAll: (req, res) => {
@@ -108,8 +109,9 @@ err,
 }
 };
 
-- Buat folder menuRoutes (penamaan bebas), kemudian tambahkan code seperti ini :
+- Buat folder menuRoutes.js (penamaan bebas), pada folder routes kemudian tambahkan code seperti ini :
 
+// FILE menuRoutes.js
 const menuRoutes = require('express').Router();
 const menuControllers = require('../controllers/menuController');
 
@@ -122,6 +124,7 @@ disini yang kita pakai hanya getall nya terlebih dahulu.
 
 - Kemudian buat file baru di folder routes lagi bernama index.js, yang berisi code di bawah ini :
 
+// File /routes/index.js
 const mainRouts = require ('express').Router();
 const menuRoutes = require ('./menuRoutes');
 
@@ -133,6 +136,7 @@ module.exports = mainRouts;
 
 - tambahkan methode post data untuk menambahkan data, caranya tambahkan code di menuControllers.js sehingga code keseluruhannya seperti ini :
 
+// GET DAN POST DATA
 const { menu } = require("../models");
 module.exports = {
 getAll: (req, res) => {
