@@ -6,17 +6,17 @@
 
 - buka terminal, ketik npm init -y, untuk menginisialisasi npm pada project kita.
 
-$ npm i express mysql2 sequelize sequelize-cli –-save
+      $ npm i express mysql2 sequelize sequelize-cli –-save
 
 fungsi dari sequelize-cli di sini adalah     untuk mempermudah membuat perintah di
 sequelize/.
 
 Jika Error bisa menggunakan perintah ini :
-$ npm i --save express mysql2
-$ npm i sequalize-cli --save
+      $ npm i --save express mysql2
+      $ npm i sequalize-cli --save
 
 Atau bisa juga menggunakan perintah :
-$ npm i express mysql2 sequelize sequelize-cli
+      $ npm i express mysql2 sequelize sequelize-cli
 
 - Install Nodemon di project dengan perintah ini:
    $ sudo npm install -g nodemon
