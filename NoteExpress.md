@@ -13,12 +13,12 @@ sequelize
 
 Jika Error bisa menggunakan perintah ini :
 
-      $ npm i --save express mysql2
-      $ npm i sequalize-cli --save
+        $ npm i --save express mysql2
+        $ npm i sequalize-cli --save
 
 Atau bisa juga menggunakan perintah :
 
-      $ npm i express mysql2 sequelize sequelize-cli
+        $ npm i express mysql2 sequelize sequelize-cli
 
 - Install Nodemon di project dengan perintah ini:
 
