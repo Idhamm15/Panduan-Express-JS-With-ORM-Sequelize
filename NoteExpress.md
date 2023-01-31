@@ -8,7 +8,7 @@
 
       $ npm i express mysql2 sequelize sequelize-cli –-save
 
-fungsi dari sequelize-cli di sini adalah     untuk mempermudah membuat perintah di
+fungsi dari sequelize-cli di sini adalah untuk mempermudah membuat perintah di
 sequelize/.
 
 Jika Error bisa menggunakan perintah ini :
@@ -85,7 +85,7 @@ bisa di cek respon dari terminalnya dan bisa juga cek di localhost/phpmyadmin ap
 - Buat model databasenya terlebih dahulu seperti contoh ini :
 
       $ npx sequelize model:create --name menu --attributes nama:string,harga:integer,deskripsi:string,kategori:string
-      
+
 Keterangan :
 
 menu = nama tabelnya
