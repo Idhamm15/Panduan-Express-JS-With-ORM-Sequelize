@@ -24,43 +24,43 @@ $ npm i express mysql2 sequelize sequelize-cli
    $ touch .sequelizerc
 
 dan isi code nya dengan menggunakan code di bawah :
-const path = require('path');
-module.exports = {
-'config': path.resolve('src/config', 'config.js'),
-'models-path': path.resolve('src', 'models'),
-'seeders-path': path.resolve('src/database', 'seeders'),
-'migrations-path': path.resolve('src/database', 'migrations')
-};
+      const path = require('path');
+      module.exports = {
+      'config': path.resolve('src/config', 'config.js'),
+      'models-path': path.resolve('src', 'models'),
+      'seeders-path': path.resolve('src/database', 'seeders'),
+      'migrations-path': path.resolve('src/database', 'migrations')
+      };
 
 - Buat file index.js dan isikan code seperti ini :
 
-// require ("dotenv").config({})
-const express = require ('express');
-const app = express();
+      // require ("dotenv").config({})
+      const express = require ('express');
+      const app = express();
 
-// inisialisasi port yang di jalankan (bebas pilih port brapa saja)
-const port = process.env.PORT || 5858;
-//const mainRouts = require('./src/routes');
+      // inisialisasi port yang di jalankan (bebas pilih port brapa saja)
+      const port = process.env.PORT || 5858;
+      //const mainRouts = require('./src/routes');
 
-app.use(express.urlencoded({extended:false}));
-//app.use('/', mainRouts)
+      app.use(express.urlencoded({extended:false}));
+      //app.use('/', mainRouts)
 
-app.listen (port, ()=>{
-console.log("server run in port " + port)
-});
+      app.listen (port, ()=>{
+      console.log("server run in port " + port)
+      });
 
-- Kemudian masuk package.json, pada baris di bawah ini :
+      - Kemudian masuk package.json, pada baris di bawah ini :
 
-"scripts": {
-"test": "echo \"Error: no test specified\" && exit 1"
-},
+      "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+      },
 
-Tambahkan codenya menjadi seperti ini :
-"scripts": {
-"test": "echo \"Error: no test specified\" && exit 1",
-"start" :"nodemon index.js",
-"server" : "nodemon index.js"
-},
+      Tambahkan codenya menjadi seperti ini :
+      "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start" :"nodemon index.js",
+      "server" : "nodemon index.js"
+      },
 
 - Buat folder src kemudian ketik di terminal seperti di bawah ini :
 
@@ -87,100 +87,100 @@ nama, harga deskripsi dan kategori = kolom /attributenya.
 
 - Buat file menuController.js (penamaan bebas), pada folder controller kemudian tambahkan code get all seperti ini :
 
-// File /controller/menuController.js
-const { menu } = require("../models");
-module.exports = {
-getAll: (req, res) => {
-menu.findAll()
-.then((data) => {
-res.send({
-msg: "succes get all data ",
-status: 200,
-data,
-});
-})
-.catch((err) => {
-res.send({
-msg: "eror get all data ",
-status: 500,
-err,
-});
-});
-}
-};
+      // File /controller/menuController.js
+      const { menu } = require("../models");
+      module.exports = {
+      getAll: (req, res) => {
+      menu.findAll()
+      .then((data) => {
+      res.send({
+      msg: "succes get all data ",
+      status: 200,
+      data,
+      });
+      })
+      .catch((err) => {
+      res.send({
+      msg: "eror get all data ",
+      status: 500,
+      err,
+      });
+      });
+      }
+      };
 
 - Buat folder menuRoutes.js (penamaan bebas), pada folder routes kemudian tambahkan code seperti ini :
 
-// FILE menuRoutes.js
-const menuRoutes = require('express').Router();
-const menuControllers = require('../controllers/menuController');
+      // FILE menuRoutes.js
+      const menuRoutes = require('express').Router();
+      const menuControllers = require('../controllers/menuController');
 
-menuRoutes.get('/', menuControllers.getAll)
-menuRoutes.post('/tambahData', menuControllers.postData)
+      menuRoutes.get('/', menuControllers.getAll)
+      menuRoutes.post('/tambahData', menuControllers.postData)
 
-module.exports = menuRoutes;
+      module.exports = menuRoutes;
 
 disini yang kita pakai hanya getall nya terlebih dahulu.
 
 - Kemudian buat file baru di folder routes lagi bernama index.js, yang berisi code di bawah ini :
 
-// File /routes/index.js
-const mainRouts = require ('express').Router();
-const menuRoutes = require ('./menuRoutes');
+      // File /routes/index.js
+      const mainRouts = require ('express').Router();
+      const menuRoutes = require ('./menuRoutes');
 
-mainRouts.use('/menu', menuRoutes);
+      mainRouts.use('/menu', menuRoutes);
 
-module.exports = mainRouts;
+      module.exports = mainRouts;
 
 - coba cek di browser dengan ketik localhost:5000 (portnya)
 
 - tambahkan methode post data untuk menambahkan data, caranya tambahkan code di menuControllers.js sehingga code keseluruhannya seperti ini :
 
-// GET DAN POST DATA
-const { menu } = require("../models");
-module.exports = {
-getAll: (req, res) => {
-menu.findAll()
-.then((data) => {
-res.send({
-msg: "succes get all data ",
-status: 200,
-data,
-});
-})
-.catch((err) => {
-res.send({
-msg: "eror get all data ",
-status: 500,
-err,
-});
-});
-},
-postData: (req, res) => {
-let { body } = req;
-
-    // const newData = {
-    //   ...body,
-    //   image: req.image.url,
-    // };
-    menu.create(req)
+      // GET DAN POST DATA
+      const { menu } = require("../models");
+      module.exports = {
+      getAll: (req, res) => {
+      menu.findAll()
       .then((data) => {
-        res.send({
-          msg: "succes get all data ",
-          status: 200,
-          data,
-        });
+      res.send({
+      msg: "succes get all data ",
+      status: 200,
+      data,
+      });
       })
       .catch((err) => {
-        res.send({
-          msg: "eror get all data ",
-          status: 500,
-          err,
-        });
+      res.send({
+      msg: "eror get all data ",
+      status: 500,
+      err,
       });
+      });
+      },
+      postData: (req, res) => {
+      let { body } = req;
 
-}
-};
+          // const newData = {
+          //   ...body,
+          //   image: req.image.url,
+          // };
+          menu.create(req)
+            .then((data) => {
+              res.send({
+                msg: "succes get all data ",
+                status: 200,
+                data,
+              });
+            })
+            .catch((err) => {
+              res.send({
+                msg: "eror get all data ",
+                status: 500,
+                err,
+              });
+            });
+
+      }
+      };
 
 - Kemudian untuk menambahkan data, bisa pakai ekstensi dari vscode yaitu thunder client atau bisa juga menggunakan postman, disini kita pakai thunder client, install dulu ekstensinya lalu buka.
 
