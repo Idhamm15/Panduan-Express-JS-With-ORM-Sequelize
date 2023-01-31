@@ -4,7 +4,7 @@
 
 ## Cara penggunaan :
 
-- buka terminal, ketik npm init -y, untuk menginisialisasi npm pada project kita.
+- Buka terminal, ketik npm init -y, untuk menginisialisasi npm pada project kita.
 
       $ npm i express mysql2 sequelize sequelize-cli –-save
 
