@@ -201,17 +201,17 @@ let { body } = req;
   - deskripsi = ini mie ayam
   - kategori = makananan
 
-20. sebelum post, update file index.js yang ada di luar srcnya menjadi seperti ini :
+- sebelum post, update file index.js yang ada di luar srcnya menjadi seperti ini :
 
-// require ("dotenv").config({})
-const express = require ('express');
-const app = express();
-const port = process.env.PORT || 5151;
-const mainRouts = require('./src/routes');
+    // require ("dotenv").config({})
+    const express = require ('express');
+    const app = express();
+    const port = process.env.PORT || 5151;
+    const mainRouts = require('./src/routes');
 
-app.use(express.urlencoded({extended:false}));
-app.use('/', mainRouts)
+    app.use(express.urlencoded({extended:false}));
+    app.use('/', mainRouts)
 
-app.listen(port, () => {
-console.log("server run in port " + port);
-});
+    app.listen(port, () => {
+    console.log("server run in port " + port);
+    });
