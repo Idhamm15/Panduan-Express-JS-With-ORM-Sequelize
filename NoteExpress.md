@@ -229,4 +229,4 @@
       console.log("server run in port " + port);
       });
 
-- Kemudian coba cek datanya dengan mengganti metohodenya menjadi GET dan ganti urlnya menjadi localhost:5151/menu.
+- Kemudian coba cek datanya dengan mengganti methodenya menjadi GET dan ganti urlnya menjadi localhost:5000/menu.
