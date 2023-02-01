@@ -1,12 +1,12 @@
 # MEMBUAT BACKEND RESTFUL API DENGAN MENGGUNAKAN EXPRESS JS WITH ORM SEQUELIZE
 
-## Component
+## COMPONENT
 - CRUD
 - Relasi
 - JWT Web Token
 
 
-## Cara penggunaan :
+## CARA PENGGUNAAN :
 
 - Buka terminal, ketik npm init -y, untuk menginisialisasi npm pada project kita.
 
