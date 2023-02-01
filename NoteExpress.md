@@ -100,6 +100,7 @@
 
 - lalu jalankan npx sequelize db:migrate cek pada database maka akan ada tabel baru
 
+## MEMBUAT METHODE GET DATA
 - Buat file menuController.js (penamaan bebas), pada folder controller kemudian tambahkan code get all seperti ini :
 
       // File /controller/menuController.js
@@ -147,8 +148,9 @@
 
       module.exports = mainRouts;
 
-- coba cek di browser dengan ketik localhost:5000 (portnya)
+- coba cek di browser dengan ketik localhost:5000/menu (portnya)
 
+## MEMBUAT METHODE POST DATA (TAMBAH DATA)
 - tambahkan methode post data untuk menambahkan data, caranya tambahkan code di menuControllers.js sehingga code keseluruhannya seperti ini :
 
       // GET DAN POST DATA
@@ -231,6 +233,7 @@
 
 - Kemudian coba cek datanya menggunakan Thunder Client dengan mengganti methodenya menjadi GET dan ganti urlnya menjadi localhost:5000/menu.
 
+## MEMBUAT METHODE DELETE DATA
 - Selanjutnya, tambahkan methode hapus data dengan cara tambahkan code pada file menuController.js yang ada di folder controller (./src/controller/menuController.js) dengan code seperti di ini :
 
       // Methode untuk hapus data
@@ -277,4 +280,61 @@
     - hapusData = mengikuti yang ada di menu routes (di menu routes bebas penamaan pathnya)
     - 1 = Id yang akan dihapus
 
-            
+## MEMBUAT METHODE UPDATE DATA
+- Selanjutnya tambahkan Methode Update, dengan cara ubah code yang ada di file menuContoroller.js yang ada di folder controller (./src/controllers/menuController.js)
+
+Menggunakan code seperti di bawah ini :
+
+      // Methode Update data (Ubah Data)
+      editData: (req, res) => {
+      const { body } = req;
+      const { id } = req.params;
+      menu.update(body, {
+            where: { id },
+            })
+            .then((data) => {
+            res.send({
+            msg: "succes get all data ",
+            status: 200,
+            data,
+            });
+            })
+            .catch((err) => {
+            res.send({
+            msg: "eror get all data ",
+            status: 500,
+            err,
+            });
+            });
+      },
+
+- tambahkan code ke file menuRoutes.js yang ada di Routes (./src/Routes/menuRoutes.js) dengan code sehingga codenya menjadi seperti ini secara keseluruhan :
+
+      // file menuRoutes.js (./src/Routes/menuRoutes.js)
+      const menuRoutes = require("express").Router();
+      const menuControllers = require("../controllers/menuController");
+
+      menuRoutes.get("/", menuControllers.getAll);
+      menuRoutes.post("/tambahData", menuControllers.postData);
+      menuRoutes.put("/updateData/:id", menuControllers.editData);
+      menuRoutes.delete("/hapusData/:id", menuControllers.delete);
+
+      module.exports = menuRoutes;
+
+- Kemudian, buka Thunder clietnya, Ubah methodenya menjadi PUT dan ubah urlnya menjadi localhost:5000/menu/updateData/:7 (misalkan)
+
+  Keterangan :
+
+    - localhost = Server lokal
+    - 5000 = port yang berjalan
+    - updateData = mengikuti yang ada di menu routes (di menu routes bebas penamaan pathnya)
+    - :7 = Id yang akan diupdate.
+
+- Kemudian masuk ke body => form encode masukan attributenya seperti : nama. harga, deskripsi, kategori dan isi value yang baru, contohnya :
+
+    - harga = ayamm (pastikan valusenya tidak sama dengan sebelumnya, jika ingin update)
+    - harga = (value baru)
+    - deskripsi = (value baru)
+    - kategori = (value baru )
+
+    Keterangan : value baru berari bebas isi apa saja sesuka hati.
