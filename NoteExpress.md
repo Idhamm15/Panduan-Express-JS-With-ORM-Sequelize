@@ -131,7 +131,7 @@
       }
       };
 
-- Buat folder menuRoutes.js (penamaan bebas), pada folder routes kemudian tambahkan code seperti ini :
+- Buat file baru bernama menuRoutes.js (penamaan bebas), pada folder routes kemudian tambahkan code seperti ini :
 
       // FILE menuRoutes.js
       const menuRoutes = require('express').Router();
