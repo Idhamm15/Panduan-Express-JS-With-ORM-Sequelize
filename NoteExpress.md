@@ -342,7 +342,7 @@ Menggunakan code seperti di bawah ini :
     - updateData = mengikuti yang ada di menu routes (di menu routes bebas penamaan pathnya)
     - :7 = Id yang akan diupdate.
 
-- Kemudian masuk ke body => form encode masukan attributenya seperti : nama. harga, deskripsi, kategori dan isi value yang baru, contohnya :
+- Kemudian masuk ke body => form encode masukan attributenya seperti : nama, harga, deskripsi, kategori dan isi value yang baru, contohnya :
 
     - harga = ayamm (pastikan valusenya tidak sama dengan sebelumnya, jika ingin update)
     - harga = (value baru)
