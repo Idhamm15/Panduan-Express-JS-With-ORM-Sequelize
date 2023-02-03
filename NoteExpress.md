@@ -154,6 +154,10 @@
 
       module.exports = mainRouts;
 
+- ketikan perintah :
+
+      $ npm run start      
+
 - coba cek di browser dengan ketik localhost:5000/menu (portnya)
 
 ## MEMBUAT METHODE POST DATA (TAMBAH DATA)
