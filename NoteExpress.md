@@ -50,7 +50,7 @@
       const app = express();
 
       // inisialisasi port yang di jalankan (bebas pilih port brapa saja)
-      const port = process.env.PORT || 5858;
+      const port = process.env.PORT || 5000;
       //const mainRouts = require('./src/routes');
 
       app.use(express.urlencoded({extended:false}));
