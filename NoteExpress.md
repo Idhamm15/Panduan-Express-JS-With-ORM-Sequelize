@@ -79,6 +79,8 @@
       $ cd src
       $ npx sequelize init
 
+- lihat pada folder config => config.json, ubah nama databasenya yang ada pada development dan production, karena itu penamaan database yang akan kita pakai (penamaan database bebas)
+
 - Buat folder bernama Controllers dan Routes (penamaan folder bebas)
 
 - Jalankan perintah di terminalnya dengan perintah berikut untuk membuat databasenya :
