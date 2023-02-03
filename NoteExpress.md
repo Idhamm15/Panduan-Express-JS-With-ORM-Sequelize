@@ -100,7 +100,11 @@
 
 - cek pada model dan database/migration
 
-- lalu jalankan npx sequelize db:migrate cek pada database maka akan ada tabel baru
+- lalu jalankan
+
+      $ npx sequelize db:migrate
+      
+- cek pada database maka akan ada tabel baru
 
 ## MEMBUAT METHODE GET DATA
 - Buat file menuController.js (penamaan bebas), pada folder controller kemudian tambahkan code get all seperti ini :
