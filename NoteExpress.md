@@ -160,6 +160,8 @@
 
 - coba cek di browser dengan ketik localhost:5000/menu (portnya)
 
+- responnya akan cannot get menu, karena kita belum memasukan datanya, nah kita perlu menambahkan methode post untuk menambahkan data.
+
 ## MEMBUAT METHODE POST DATA (TAMBAH DATA)
 - tambahkan methode post data untuk menambahkan data, caranya tambahkan code di menuControllers.js sehingga code keseluruhannya seperti ini :
 
